@@ -1,0 +1,175 @@
+/* reset styling */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style:none;
+}
+/* navigation start */
+.nav_header{
+    padding: 10px 80px;
+}
+.nav_item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.nav_item .logo{
+    height: 70px;
+    width: 70px;   
+}
+.nav_item .logo img{
+    height:100%;
+    width:100%;
+}
+.logo img{
+    border-radius: 100%;
+
+}
+.nav_link{
+    display: flex;
+    gap: 20px;
+   
+}
+.nav_link i{
+    padding:0px 2px;
+}
+
+ul li a{
+    font-size: 17px;
+    color: gray;
+}
+ul li a:hover{
+    color: rgb(4, 228, 4);
+    transition: 1s ease-in-out;
+}
+/* navigation ends */
+/* wellness content start */
+.wellness_content{
+    padding: 0px 80px;
+    display: flex;
+    height: 95vh;
+    align-items: center;
+    gap: 10px;
+  
+}
+
+.wellness_btn{
+    background-color: green;
+    padding: 12px 15px;
+    color: white;
+    border: none;
+    display: flex;
+    gap: 8px;
+    border-radius: 20px;
+    font-weight: bolder;
+    max-width: fit-content;
+    
+}
+.wellness_btn:hover{
+    background-color:black;
+    color: #0bab1b;
+    transition: 1s ease-in-out;
+}
+.wellness_btn i:hover{
+    color:green;
+    transition: 1s ease-in-out; 
+}
+.wellness_left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.wellness_right{
+    flex: 1;
+    height: 100%;
+
+}
+.wellness_left h1{
+     font-size: 65px;
+}
+.wellness_gradient{
+    color: transparent;
+    background-image: linear-gradient(to right,#0bab1b, #c25119);
+    background-clip: text;
+    -webkit-background-clip:text;
+   
+    /* padding-bottom: 20px; */
+}
+.wellness_parag{
+    line-height: 23px;
+}
+.wellness_right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.action{
+    display:none;
+}
+.mobile_menu{
+    position: absolute;
+    background-color: white;
+    width:100%;
+    padding:40px 0px;
+    top: -100%;
+    transition:0.30s ease-in-out;
+}
+.reset{
+    top: 15% !important;
+}
+.mobile_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.cancel{
+    display: none;
+}
+/* wellness content end */
+
+/*wellness content responsiveness start here */
+/* Tablet screen */
+@media(max-width:834px){
+    .nav_header{
+        padding: 20px 16px;
+    }  
+    .wellness_content{
+    padding: 0px 16px; 
+    height: 50vh; 
+    gap: 20px;
+}
+    .wellness_left h1{
+        font-size: 30px;
+    }
+    .wellness_parag{
+        line-height: 25px;
+    }
+}
+@media(max-width:500px){
+    .nav_link{
+        display: none;
+    }
+    .action{
+        display: block;
+        font-size:23px;
+    }
+    .wellness_content{
+        padding: 30px 16px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .wellness_left h1{
+        font-size: 25px;
+    }
+}
